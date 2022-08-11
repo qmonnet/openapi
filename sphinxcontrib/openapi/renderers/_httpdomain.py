@@ -1,6 +1,11 @@
 """OpenAPI spec renderer."""
 
-import collections
+import sys
+if sys.version_info >= (3, 3):
+    import collections.abc as collections
+else:
+    import collections
+
 import copy
 import functools
 import http.client
